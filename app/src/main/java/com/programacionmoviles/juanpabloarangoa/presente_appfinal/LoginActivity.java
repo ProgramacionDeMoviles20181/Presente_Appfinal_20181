@@ -47,6 +47,11 @@ public class LoginActivity extends AppCompatActivity {
             sName     = data.getExtras().getString("name"    );
             sEmail    = data.getExtras().getString("email"   );
             sPassword = data.getExtras().getString("password");
+
+            Log.d("Name",sName);
+            Log.d("Email",sEmail);
+            Log.d("Password",sPassword);
+
             Toast.makeText(this,"Registro Completado", Toast.LENGTH_LONG).show();
         }else if(requestCode == registerRequest && resultCode == RESULT_CANCELED){
             Toast.makeText(this,"Registro Cancelado" , Toast.LENGTH_LONG).show();

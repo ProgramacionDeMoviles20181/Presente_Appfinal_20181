@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         if(extras != null) {
             sName     = extras.getString("name"    );
-            sEmail    = extras.getString("email");
+            sEmail    = extras.getString("email"   );
             sPassword = extras.getString("password");
         }else{
             sName     = "";
