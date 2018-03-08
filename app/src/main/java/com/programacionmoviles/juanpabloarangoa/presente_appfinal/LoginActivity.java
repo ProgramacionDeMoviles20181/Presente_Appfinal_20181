@@ -19,7 +19,6 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         eMail     = findViewById(R.id.eMail);
         ePassword = findViewById(R.id.ePassword);
-
         Bundle extras = getIntent().getExtras();
         if(extras != null) {
             sName     = String.valueOf(extras.getInt("name"    ));
