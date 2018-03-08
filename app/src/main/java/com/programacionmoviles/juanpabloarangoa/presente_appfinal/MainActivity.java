@@ -6,15 +6,19 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     private String sName,sEmail,sPassword;
+    private TextView tSaludo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        tSaludo = findViewById(R.id.tSaludo);
 
         Bundle extras = getIntent().getExtras();
         if(extras != null) {
@@ -30,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
         Log.d("Name",sName);
         Log.d("Email",sEmail);
         Log.d("Password",sPassword);
+
+        tSaludo.setText("Hola " + sName);
 
     }
 
