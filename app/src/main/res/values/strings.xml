@@ -9,4 +9,5 @@
     <string name="name">Nombre</string>
     <string name="password2">Confirmar Contraseña</string>
     <string name="registerMsg2">Registrarse</string>
+    <string name="Principal">Menu Principal</string>
 </resources>

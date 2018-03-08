@@ -3,6 +3,7 @@ package com.programacionmoviles.juanpabloarangoa.presente_appfinal;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -21,14 +22,18 @@ public class LoginActivity extends AppCompatActivity {
         ePassword = findViewById(R.id.ePassword);
         Bundle extras = getIntent().getExtras();
         if(extras != null) {
-            sName     = String.valueOf(extras.getInt("name"    ));
-            sEmail    = String.valueOf(extras.getInt("email"   ));
-            sPassword = String.valueOf(extras.getInt("password"));
+            sName     = extras.getString("name"    );
+            sEmail    = extras.getString("email");
+            sPassword = extras.getString("password");
         }else{
             sName     = "";
             sEmail    = "";
             sPassword = "";
         }
+
+        Log.d("Name",sName);
+        Log.d("Email",sEmail);
+        Log.d("Password",sPassword);
     }
 
     public void onTextClick(View view) {
@@ -55,6 +60,11 @@ public class LoginActivity extends AppCompatActivity {
             Toast.makeText(this,"Falta algún registro" , Toast.LENGTH_LONG).show();
         }else if(sEmail.equals(eMail.getText().toString()) && sPassword.equals(ePassword.getText().toString())){
             Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+
+            Log.d("Name",sName);
+            Log.d("Email",sEmail);
+            Log.d("Password",sPassword);
+
             intent.putExtra("name"    , sName);
             intent.putExtra("email"   , sEmail);
             intent.putExtra("password", sPassword);
