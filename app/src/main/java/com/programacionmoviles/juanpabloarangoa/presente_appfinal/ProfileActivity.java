@@ -7,14 +7,19 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class ProfileActivity extends AppCompatActivity {
     private String sName,sEmail,sPassword;
+    private TextView tShowName, tShowEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+        tShowName = findViewById(R.id.tShowName);
+        tShowEmail = findViewById(R.id.tShowEmail);
 
         Bundle extras = getIntent().getExtras();
         if(extras != null) {
@@ -26,6 +31,10 @@ public class ProfileActivity extends AppCompatActivity {
             sEmail    = "";
             sPassword = "";
         }
+
+        tShowName.setText(sName);
+        tShowEmail.setText(sEmail);
+
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {

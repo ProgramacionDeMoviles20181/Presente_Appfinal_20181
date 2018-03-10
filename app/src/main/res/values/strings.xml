@@ -13,4 +13,8 @@
     <string name="MainActivity">Menú Principal</string>
     <string name="RegisterActivity">Registrarse</string>
     <string name="ProfileActivity">Mi Perfil</string>
+    <string name="informacion1">Navega sobre tus multiples cursos</string>
+    <string name="informacion2">Ten un control efectivo sobre la asistencia de tus alumnos</string>
+    <string name="informacion3">Carga las notas de tus estudiantes de una manera simple.</string>
+
 </resources>

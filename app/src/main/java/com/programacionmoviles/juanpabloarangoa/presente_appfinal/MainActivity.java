@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         Log.d("Email",sEmail);
         Log.d("Password",sPassword);
 
-        tSaludo.setText("Hola " + sName);
+        tSaludo.setText("Bienvenido Profesor " + sName);
 
     }
 
