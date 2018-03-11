@@ -81,4 +81,16 @@ public class ProfileActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(ProfileActivity.this,MainActivity.class);
+        intent.putExtra("name"    , sName);
+        intent.putExtra("email"   , sEmail);
+        intent.putExtra("password", sPassword);
+
+        startActivity(intent);
+        finish();
+
+        super.onBackPressed();
+    }
 }
