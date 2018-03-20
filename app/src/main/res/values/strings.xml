@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">¡Presente!</string>
-    <string name="logout">Cerrar Cesión</string>
+    <string name="logout">Cerrar Sesión</string>
     <string name="myProfile">Mi Perfil</string>
     <string name="mail">Correo</string>
     <string name="password">Contraseña</string>
